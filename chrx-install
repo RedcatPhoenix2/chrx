@@ -287,7 +287,7 @@ determine_osv_ubuntu()
       ;;
     *)
       if [ "`echo ${CHRX_OS_VERSION} | grep "^[0-9.][0-9.]*$"`" ]; then
-        msg_os_version="${ANSI_YEL}(CAUTION: untested!)${ANSI_RST}"
+        msg_os_version="${ANSI_YEL}(CAUTION: untested on this model!)${ANSI_RST}"
       else
         msg_os_version="${ANSI_RED}(invalid!)${ANSI_RST}"
         FAIL=1
@@ -395,7 +395,7 @@ determine_osv_fedora()
     *)
       if [[ ${CHRX_OS_RELEASE} == [0-9][0-9] ]]; then
         CHRX_OS_VERSION=${CHRX_OS_RELEASE}
-        msg_os_version="${ANSI_YEL}(CAUTION: untested!)${ANSI_RST}"
+        msg_os_version="${ANSI_YEL}(CAUTION: untested on this model!)${ANSI_RST}"
       else
         msg_os_version="${ANSI_RED}(invalid!)${ANSI_RST}"
         FAIL=1
